@@ -6,7 +6,7 @@ function setup() {
   
   function draw() {
     // Generate random coordinates for the start and end points of the line
-    let x1 = random(width);   // random x coordinate for start point
+    let x1 = 0;   // random x coordinate for start point
     let y1 = random(height);  // random y coordinate for start point
     let x2 = random(width);   // random x coordinate for end point
     
