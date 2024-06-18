@@ -1,29 +1,20 @@
 function setup() {
     createCanvas(windowWidth, windowHeight);
-    background(10,20,80);
+    background(10,20,45);
+    frameRate(4);
   }
   
   function draw() {
-    // Randomly generate circles
-    let x = random(width); // Random x-coordinate
-    let y = random(height); // Random y-coordinate
-    let radius = random(10, 50); // Random radius
+    // Generate random coordinates for the start and end points of the line
+    let x1 = random(width);   // random x coordinate for start point
+    let y1 = random(height);  // random y coordinate for start point
+    let x2 = random(width);   // random x coordinate for end point
+    
+    
+    // Generate random shade of blue for the line
+  let b = random(100, 255);  // random blue component between 100 and 255
+    
+  stroke(0, 0, b);  // set stroke color to shades of blue
+  line(x1, y1, x2, y1);  // draw the line
+}
   
-    // Randomly generate color
-    let r = random(255); // Random red value
-    let g = random(255); // Random green value
-    let b = random(255); // Random blue value
-    let alpha = random(100, 200); // Random alpha (transparency)
-  
-    // Set fill and stroke properties
-    fill(r, g, b, alpha);
-    noStroke();
-  
-    // Draw the circle
-    ellipse(x, y, radius * 2, radius * 2);
-  }
-  
-  // Optional: if you want to regenerate the canvas on mouse press
-  function mousePressed() {
-    background(220);
-  }
