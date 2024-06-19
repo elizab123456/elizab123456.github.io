@@ -6,7 +6,7 @@ function setup() {
   initialX = startX = width / 2; // Start in the middle horizontally
   initialY = startY = height / 2; // Start in the middle vertically
   background(220);
-  frameRate (5);
+  frameRate(5);
 }
 
 function draw() {
@@ -17,26 +17,26 @@ function drawLine() {
   // Set the endpoint direction randomly
   let possibility1 = floor(random(1, 4)); // 1 to 3 for the general direction
   let possibility2 = floor(random(1, 7)); // 1 to 6 for the specific direction
-  
+
   // Define the lengths for the two possibilities
   let len1 = 50; // Length for the first set of possibilities
   let len2 = 100; // Length for the second set of possibilities
-  
-  // Calculate the average length
-  let averageLen = (len1 + len2) / 2;
-  
+
+  // Calculate the length based on the two possibilities
+  let averageLen = ((len1 * possibility1) + (len2 * possibility2)) / 2;
+
   // Calculate the endpoint coordinates based on the possibilities and average length
   let endX = startX, endY = startY;
   if (possibility1 === 1) { // Horizontal
-    if (possibility2 === 1 || possibility2 === 3 || possibility2 === 5) {
+    if (possibility2 % 2 === 1) {
       endX = startX - averageLen; // Left
-    } else if (possibility2 === 2 || possibility2 === 4 || possibility2 === 6) {
+    } else {
       endX = startX + averageLen; // Right
     }
   } else if (possibility1 === 2) { // Vertical
-    if (possibility2 === 1 || possibility2 === 3 || possibility2 === 5) {
+    if (possibility2 % 2 === 1) {
       endY = startY + averageLen; // Down
-    } else if (possibility2 === 2 || possibility2 === 4 || possibility2 === 6) {
+    } else {
       endY = startY - averageLen; // Up
     }
   } else if (possibility1 === 3) { // Diagonal
@@ -63,7 +63,7 @@ function drawLine() {
         return;
     }
   }
-  
+
   // Check if the line goes off the canvas
   if (endX < 0 || endX > width || endY < 0 || endY > height) {
     // Set a new random starting point near the initial starting point
@@ -90,11 +90,11 @@ function drawLine() {
     }
     return; // End the current draw call to avoid drawing the out-of-bounds line
   }
-  
+
   // Draw the line
   stroke(0);
   line(startX, startY, endX, endY);
-  
+
   // Update startX and startY to the end point of the line
   startX = endX;
   startY = endY;
