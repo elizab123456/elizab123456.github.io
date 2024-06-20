@@ -5,33 +5,33 @@ function setup() {
   }
   
   function draw() {
-    // Generate random coordinates for the start and end points of the blue line
-    let x1 = 0;                     // start from the left edge of the canvas
-    let y1 = random(height);        // random y coordinate for start point
-    let x2 = random(width);         // random x coordinate for end point
+    
+    let x1 = 0;                     
+    let y1 = random(height);        
+    let x2 = random(width);         
   
-    let r = random(0, 50);          // random red component between 0 and 50
-    let g = random(0, 50);          // random green component between 0 and 50
-    let b = random(50, 150);        // random blue component between 50 and 150 (darker shades of blue)
+    let r = random(0, 50);          
+    let g = random(0, 50);          
+    let b = random(50, 150);       
   
-    // Draw the blue line
-    stroke(0, 0, b);                // set stroke color to shades of blue
-    strokeWeight(3);                // set stroke weight for the blue line
-    line(x1, y1, x2, y1);           // draw the blue line
+    
+    stroke(0, 0, b);                
+    strokeWeight(3);                
+    line(x1, y1, x2, y1);           
   
-    // Draw overlapping circles instead of rectangles
-    let circleX = random(width);      // random x coordinate for circle
-    let circleY = random(height);     // random y coordinate for circle
-    let circleSize = random(20, 100); // random size of circle
+    
+    let circleX = random(width);      
+    let circleY = random(height);     
+    let circleSize = random(20, 100); 
   
     fill(random(150, 255), 0, random(150, 255), 150);
-    ellipse(circleX, circleY, circleSize, circleSize);  // draw the circle
+    ellipse(circleX, circleY, circleSize, circleSize);  
   
-    // Draw white lines from the right edge to complement the blue lines
-    let oppositeX1 = width;         // start from the right edge of the canvas
-    let oppositeX2 = random(width); // random x coordinate for end point on the right side
+    
+    let oppositeX1 = width;         
+    let oppositeX2 = random(width); 
   
-    stroke(255);                    // set stroke color to white
-    strokeWeight(3);                // set stroke weight for the white line
-    line(oppositeX1, y1, oppositeX2, y1); // draw the white line
+    stroke(255);                    
+    strokeWeight(3);                
+    line(oppositeX1, y1, oppositeX2, y1); 
   }
