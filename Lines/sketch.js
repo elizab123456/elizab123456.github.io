@@ -70,22 +70,22 @@ function drawLine() {
     let restartPossibility = floor(random(1, 7)); // 1 to 6 for the new starting point direction
     switch (restartPossibility) {
       case 1:
-        startX = initialX + 10; // 1 cm to the right
+        startX = initialX + 10; // 10 pixels to the right
         startY = initialY;
         break;
       case 2:
-        startX = initialX - 10; // 1 cm to the left
+        startX = initialX - 10; // 10 pixels to the left
         startY = initialY;
         break;
       case 3:
       case 6:
         startX = initialX;
-        startY = initialY + 10; // 1 cm down
+        startY = initialY + 10; // 10 pixels down
         break;
       case 4:
       case 5:
         startX = initialX;
-        startY = initialY - 10; // 1 cm up
+        startY = initialY - 10; // 10 pixels up
         break;
     }
     return; // End the current draw call to avoid drawing the out-of-bounds line
