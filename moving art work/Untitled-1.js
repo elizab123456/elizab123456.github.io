@@ -276,15 +276,15 @@ if (reversed == null) { reversed = false; }
 
 	// Layer_1
 	this.v3 = new lib.Symbol3();
-	this.v3.name = "v3";
+	this.v3.name = "Layer 2.png";
 	this.v3.setTransform(653,904.5,1,1,0,0,0,51,157.5);
 
 	this.v2 = new lib.Symbol2();
-	this.v2.name = "v2";
+	this.v2.name = "Layer 3.png";
 	this.v2.setTransform(327,371,1,1,0,0,0,49,158);
 
 	this.v1 = new lib.Symbol1();
-	this.v1.name = "v1";
+	this.v1.name = "Layer 4.png";
 	this.v1.setTransform(687,65,1,1,0,0,0,17,65);
 
 	this.instance = new lib._20464485449fffb3785c08d183036496copy();
@@ -304,7 +304,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/Untitled_1_atlas_1.png?1717494938584", id:"Untitled_1_atlas_1"}
+		{src:"images/Untitled_1_atlas_1.png?1717494938584", id:"Untitled_1_atlas_1.png"}
 	],
 	preloads: []
 };
